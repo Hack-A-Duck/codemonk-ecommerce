@@ -3,6 +3,8 @@ import './App.css';
 import { auth } from "./firebase";
 import { Button, Modal, Input } from "@material-ui/core";
 import Header from "./Header"
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Homepage from "./Homepage";
 
 const App = () =>{
   
@@ -56,10 +58,17 @@ const App = () =>{
 
 
   return (
+    <Router>
     <div className="App">
+      <Switch>
+        <Route path="/">
+          <Header/>
+          <Homepage/>
+        </Route>
       
-      <Header/>
+      </Switch>
     </div>
+    </Router>
     
   );
 }
