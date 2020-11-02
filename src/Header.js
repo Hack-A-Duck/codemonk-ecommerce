@@ -4,6 +4,7 @@ import {Link} from "react-router-dom";
 import { makeStyles } from "@material-ui/core/styles";
 import { auth } from "./firebase";
 import { Button, Modal, Input } from "@material-ui/core";
+import { useStateValue } from "./ContextProvider";
 
 
 function getModalStyle() {
@@ -40,6 +41,7 @@ const Header = () =>{
   const [password, setpassword] = useState("");
   const [email, setemail] = useState("");
   const [user, setUser] = useState(null);
+  const [state,dispatch]= useStateValue();
 
   
   useEffect(() => {
@@ -156,8 +158,8 @@ const Header = () =>{
           <Link to="/" className="app_logo">
         <h3 >CodeMonk</h3>
         </Link>
-        <Link to="/cart" className="app_cart">
-        <h2>Cart {0}</h2>
+        <Link to="/checkout/cart" className="app_cart">
+        <h2>Cart {state.cart?.length}</h2>
         </Link>
         
         {user ? (

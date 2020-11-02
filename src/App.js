@@ -38,7 +38,7 @@ const App = () =>{
     <Router>
     <div className="App">
       <Switch>
-      <Route path="/cart">
+      <Route path="/checkout/cart">
           <Header/>
           <Cart/>
         </Route>

@@ -1,0 +1,16 @@
+.cart_products{
+        display: flex;
+       flex-direction: column;
+       width: 70%;
+}
+
+.cart{
+    display: flex;
+  
+}
+
+.cart_details{
+    float: right;
+    margin-right: 10px;
+    padding: 10px;
+}

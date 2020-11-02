@@ -36,6 +36,7 @@ function Homepage() {
                     resi.map((resp,i)=>(
                                     <div className="home" key={i}>
                                      <Product
+                                        id={resp.id}
                                         title={resp.title}
                                         des={resp.description}
                                         category ={resp.category}

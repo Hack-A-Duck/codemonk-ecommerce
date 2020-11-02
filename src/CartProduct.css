@@ -1,0 +1,15 @@
+.cartproduct_image{
+    display: block;
+    max-width: 12%;
+    height: auto;
+}
+
+.cartproduct{
+    display: flex;
+    flex-direction: row;
+}
+
+.cartproduct_info{
+    display: flex;
+    flex-direction: column;
+}
