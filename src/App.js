@@ -1,10 +1,10 @@
 import React,{useState,useEffect} from "react";
-import './App.css';
+
 import { auth } from "./firebase";
-import { Button, Modal, Input } from "@material-ui/core";
 import Header from "./Header"
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Homepage from "./Homepage";
+import Cart from "./Cart";
 
 const App = () =>{
   
@@ -61,11 +61,14 @@ const App = () =>{
     <Router>
     <div className="App">
       <Switch>
+      <Route path="/cart">
+          <Header/>
+          <Cart/>
+        </Route>
         <Route path="/">
           <Header/>
           <Homepage/>
         </Route>
-      
       </Switch>
     </div>
     </Router>

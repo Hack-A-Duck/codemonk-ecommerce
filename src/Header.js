@@ -1,5 +1,6 @@
 import React,{useState,useEffect} from "react";
-import './App.css';
+import './Header.css';
+import {Link} from "react-router-dom";
 import { makeStyles } from "@material-ui/core/styles";
 import { auth } from "./firebase";
 import { Button, Modal, Input } from "@material-ui/core";
@@ -83,7 +84,7 @@ const Header = () =>{
 
 
   return (
-    <div className="App">
+    <div className="app">
      
       <Modal open={open} onClose={() => setOpen(false)}>
         <div style={modalStyle} className={classes.paper}>
@@ -152,12 +153,20 @@ const Header = () =>{
       </Modal>
 
       <div className="app_header">
-        <h3 className="app_logo">CodeMonk</h3>
-
+          <Link to="/" className="app_logo">
+        <h3 >CodeMonk</h3>
+        </Link>
+        <Link to="/cart" className="app_cart">
+        <h2>Cart {0}</h2>
+        </Link>
+        
         {user ? (
+            <>
+            <h2>{user.displayName}</h2>
           <Button className="app_loginHome" onClick={() => auth.signOut()}>
             Log Out
           </Button>
+          </>
         ) : (
           <form className="app_loginHome">
             <Button className="signin" onClick={() => setOpenSignIn(true)}>

@@ -27,6 +27,7 @@ function Homepage() {
         <div>
             <h1>Homepage</h1>
             
+            
             {loading && <p>Loading...</p>}
             
             {!loading && 
@@ -37,6 +38,7 @@ function Homepage() {
                                      <Product
                                         title={resp.title}
                                         des={resp.description}
+                                        category ={resp.category}
                                         price={resp.price}
                                         image={resp.image} />
                                     </div>
