@@ -10,7 +10,7 @@ const Product = ({id,title,des,price,image}) => {
             <div className="product_info">
             <strong>{title}</strong>
             
-            <div className="product_price">₹ {price}</div>
+            <div>₹ {price}</div>
             
             </div>
             
