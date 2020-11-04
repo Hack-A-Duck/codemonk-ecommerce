@@ -40,7 +40,19 @@ const Address = () => {
         setCity(e.target.value);
     }
 
-    
+    const addAddress = () => {
+        
+    dispatch({
+        type:'SET_ADDRESS',
+        name:name,
+        mobile:mobile,
+        pin:pin,
+        address:adrs,
+        town:town,
+        city:city,
+      })
+
+    }
     return (
         <div>
             <h1 className="title">
@@ -59,7 +71,7 @@ const Address = () => {
                     <TextField onChange={onTown} value={town} required className="inpt" label="Locality/ Town" variant="outlined" />
                     <TextField onChange={onCity} value={city} required className="inpt" label="City/ District" variant="outlined" />
                 </form>
-                <Button className="button" variant="contained" color="secondary">
+                <Button onClick={addAddress} className="button" variant="contained" color="secondary">
                  Continue
                 </Button>
             </div>
