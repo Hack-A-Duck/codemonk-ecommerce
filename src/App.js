@@ -6,6 +6,7 @@ import Homepage from "./Homepage";
 import Cart from "./Cart";
 import { useStateValue } from "./ContextProvider";
 import Address from "./Address";
+import Payment from "./Payment";
 
 const App = () =>{
   
@@ -39,6 +40,10 @@ const App = () =>{
     <Router>
     <div className="App">
       <Switch>
+      <Route path="/checkout/payment">
+          <Header/>
+          <Payment/>
+        </Route>
       <Route path="/checkout/address">
           <Header/>
           <Address/>

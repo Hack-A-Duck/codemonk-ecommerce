@@ -4,9 +4,11 @@ import "./Address.css";
 import TextField from '@material-ui/core/TextField';
 import {Button }from "@material-ui/core";
 import { useStateValue } from './ContextProvider';
+import { useHistory } from "react-router-dom";
 
 const Address = () => {
     
+    const history= useHistory();
     const [{},dispatch]=useStateValue();
 
     const [name,setName]=useState('');
@@ -53,6 +55,12 @@ const Address = () => {
       })
 
     }
+
+    const click = () =>{
+        history.push('/checkout/payment');
+        addAddress();
+    }
+
     return (
         <div>
             <h1 className="title">
@@ -71,7 +79,7 @@ const Address = () => {
                     <TextField onChange={onTown} value={town} required className="inpt" label="Locality/ Town" variant="outlined" />
                     <TextField onChange={onCity} value={city} required className="inpt" label="City/ District" variant="outlined" />
                 </form>
-                <Button onClick={addAddress} className="button" variant="contained" color="secondary">
+                <Button onClick={click} className="button" variant="contained" color="secondary">
                  Continue
                 </Button>
             </div>
