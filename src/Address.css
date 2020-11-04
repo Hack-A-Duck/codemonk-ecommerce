@@ -1,0 +1,32 @@
+.contact{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+   
+    margin-top: 10px;
+    margin-bottom: 8px;
+}
+
+.title{
+    margin: 16px;
+}
+
+.address{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+
+.inpt{
+    margin-bottom: 10px;
+}
+
+.form{
+    margin-left: 50px;
+}
+
+.button{
+    width: 30%;
+}

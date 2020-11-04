@@ -1,20 +1,27 @@
 .product {
     display: flex;
     flex-direction: column;
-    max-height: 400px;
-    min-width: 100px;
+    justify-content: space-between;
+    height: 350px;
+    width: 220px;
     padding: 20px;
-    margin: 25px;
+   margin: 20px;
     border-radius: 3px;
     border: 1px solid lightgray;
-    max-width: 30%;
+    
   }
-  
+
+  .cartproduct_pricequant{
+    display: flex;
+    flex-direction: row;
+  }
+
   .product_info {
     margin-bottom: 20px;
   }
+
   .product_image {
-    max-height: 200px;
+    max-height: 150px;
     width: 100%;
     object-fit: contain;
     margin-bottom: 15px;

@@ -1,11 +1,23 @@
 export const initialState = {
-    cart:[],
-    
+    cart:[],  
+    user:null,
+    name:null,
+    mobile:null,
+    pin:null,
+    address:null,
+    town:null,
+    city:null,
 };
 
 
 
+export const getTotal = (cart) => (
+    cart?.reduce((tot, item)=> tot + (item.price*item.quant)
+    ,0 )
+)
+
 let res=0;
+
 const reducer = (state , action) => {
     
     switch(action.type){
@@ -15,6 +27,18 @@ const reducer = (state , action) => {
                 ...state,
                 user:action.user
             } ;
+        
+        case 'SET_ADDRESS':
+            return{
+                ...state,
+                name:action.name,
+                mobile:action.mobile,
+                pin:action.pin,
+                address:action.address,
+                town:action.town,
+                city:action.city,
+            }
+            console.log(state);
         
         case 'ADD_PRODUCT':
             return{

@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Homepage from "./Homepage";
 import Cart from "./Cart";
 import { useStateValue } from "./ContextProvider";
+import Address from "./Address";
 
 const App = () =>{
   
@@ -38,6 +39,10 @@ const App = () =>{
     <Router>
     <div className="App">
       <Switch>
+      <Route path="/checkout/address">
+          <Header/>
+          <Address/>
+        </Route>
       <Route path="/checkout/cart">
           <Header/>
           <Cart/>

@@ -29,25 +29,26 @@ function Homepage() {
             
             
             {loading && <p>Loading...</p>}
-            
+            <div className="home">
             {!loading && 
             <>
                 {
                     resi.map((resp,i)=>(
-                                    <div className="home" key={i}>
+                                    <div  key={i}>
                                      <Product
                                         id={resp.id}
                                         title={resp.title}
                                         des={resp.description}
                                         category ={resp.category}
                                         price={resp.price}
-                                        image={resp.image} />
+                                        image={resp.image}
+                                        quant={0}/>
                                     </div>
                     ))
                 }
 
             </> }                   
-            
+            </div>
         </div>
     )
 }
