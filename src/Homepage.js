@@ -2,6 +2,7 @@ import React, { useEffect,useState } from 'react'
 import Product from './Product'
 import axios from "axios"
 import "./Homepage.css"
+import * as ReactBootstrap from "react-bootstrap"
 
 function Homepage() {
     const [resi , setResi] =useState([]);
@@ -10,7 +11,7 @@ function Homepage() {
     useEffect(() => {
         setLoading(true);
         const getData = async () => {
-        await axios.get('https://fakestoreapi.com/products')
+        await axios.get('https://fakestoreapi.com/products/category/jewelery')
                            .then(resp=> {
                                setResi(resp.data)
                                setLoading(false)
@@ -28,7 +29,7 @@ function Homepage() {
             <h1>Homepage</h1>
             
             
-            {loading && <p>Loading...</p>}
+            {loading && <ReactBootstrap.Spinner className="loading" animation="border" role="status" />}
             <div className="home">
             {!loading && 
             <>

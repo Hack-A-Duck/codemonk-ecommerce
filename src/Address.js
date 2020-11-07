@@ -63,21 +63,23 @@ const Address = () => {
 
     return (
         <div>
-            <h1 className="title">
+            <h4 className="title">
                 Delivery Address
-            </h1>
+            </h4>
             <div className="form">
                 <h4 className="lab1">CONTACT DETAILS</h4>
-                <form className="contact">
-                    <TextField onChange={onName} value={name} required className="inpt" label="Name" variant="outlined" />
-                    <TextField onChange={onMobile} value={mobile} required className="inpt" label="Mobile Number" variant="outlined" />
-                </form>
+                <form method="POST">
+                <div className="contact">
+                    <TextField onChange={onName} value={name} required className="inpt" margin="normal" label="Name" variant="outlined" />
+                    <TextField onChange={onMobile} value={mobile} required className="inpt" margin="normal" label="Mobile Number" variant="outlined" />
+                </div>
                 <h4 className="lab2">ADDRESS</h4>
-                <form className="address">
-                    <TextField onChange={onPin} value={pin} required className="inpt" label="Pincode" variant="outlined" />
-                    <TextField onChange={onAddress} value={adrs} required className="inpt" label="Address(House No, Building, Street, Area)" variant="outlined" />
-                    <TextField onChange={onTown} value={town} required className="inpt" label="Locality/ Town" variant="outlined" />
-                    <TextField onChange={onCity} value={city} required className="inpt" label="City/ District" variant="outlined" />
+                <div className="address">
+                    <TextField onChange={onPin} value={pin} required className="inpt" margin="normal" label="Pincode" variant="outlined" />
+                    <TextField onChange={onAddress} value={adrs} required className="inpt" margin="normal" label="Address(House No, Building, Street, Area)" variant="outlined" />
+                    <TextField onChange={onTown} value={town} required className="inpt" margin="normal" label="Locality/ Town" variant="outlined" />
+                    <TextField onChange={onCity} value={city} required className="inpt" margin="normal" label="City/ District" variant="outlined" />
+                </div>
                 </form>
                 <Button onClick={click} className="button" variant="contained" color="secondary">
                  Continue

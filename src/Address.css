@@ -19,9 +19,7 @@
     margin-bottom: 15px;
 }
 
-.inpt{
-    margin-bottom: 10px;
-}
+
 
 .form{
     margin-left: 50px;
@@ -29,4 +27,12 @@
 
 .button{
     width: 30%;
+}
+
+.lab1{
+    font-size: 15px;
+}
+
+.lab2{
+    font-size: 15px;
 }

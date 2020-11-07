@@ -7,12 +7,13 @@ export const initialState = {
     address:null,
     town:null,
     city:null,
+    price:0,
 };
 
 
 
 export const getTotal = (cart) => (
-    cart?.reduce((tot, item)=> tot + (item.price*item.quant)
+    cart?.reduce((tot, item)=> tot + (item.price*item.quant
     ,0 )
 )
 
