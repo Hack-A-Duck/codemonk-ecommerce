@@ -11,7 +11,7 @@ function Homepage() {
     useEffect(() => {
         setLoading(true);
         const getData = async () => {
-        await axios.get('https://fakestoreapi.com/products/category/jewelery')
+        await axios.get('https://fakestoreapi.com/products/')
                            .then(resp=> {
                                setResi(resp.data)
                                setLoading(false)

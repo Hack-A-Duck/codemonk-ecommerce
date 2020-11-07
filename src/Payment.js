@@ -1,7 +1,8 @@
 import React,{useState} from 'react'
 import { useStateValue } from './ContextProvider';
 import{getTotal}from "./reducer"
- 
+import axios from 'axios' 
+
 function loadScript(src) {
 	return new Promise((resolve) => {
 		const script = document.createElement('script')
@@ -32,8 +33,12 @@ const Payment = () => {
 			return
 		}
 
+		
+		axios.post('http://localhost:1337/dat',{amprice : price})
+
+
 		const data = await fetch('http://localhost:1337/razorpay', { method: 'POST' }).then((t) =>
-			state.json()
+			t.json()
 		)
 
 		console.log(data)
@@ -41,7 +46,7 @@ const Payment = () => {
 		const options = {
 			key: __DEV__ ? 'rzp_test_uGoq5ABJztRAhk' : 'PRODUCTION_KEY',
 			currency: 'INR',
-			amount: price.toString(),
+			amount: data.amount.toString(),
 			
 			name: state.name,
 			description: 'Thank you for shopping with us !',

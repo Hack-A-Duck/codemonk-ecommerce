@@ -45,9 +45,10 @@ function Cart() {
                     prefix={"₹"}
                 />
 
-            <Button onClick={e => history.push('/checkout/address')} variant="contained" color="secondary">
+            <Button disabled={state.user ? false:true } onClick={e => history.push('/checkout/address')} variant="contained" color="secondary">
                  PLACE ORDER
             </Button>
+            {!state.user?<p>Please Sign In to continue </p>:<p></p>}
             </div>
             
             </div>

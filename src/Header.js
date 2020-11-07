@@ -95,18 +95,21 @@ const Header = () =>{
               <h1>Sign Up</h1>
             </center>
             <Input
+              classname="inpt"
               type="text"
               placeholder="username"
               value={username}
               onChange={(eg) => setusername(eg.target.value)}
             />
             <Input
+              classname="inpt"
               type="email"
               placeholder="email"
               value={email}
               onChange={(e) => setemail(e.target.value)}
             />
             <Input
+              classname="inpt"
               type="password"
               placeholder="password"
               value={password}
@@ -117,6 +120,7 @@ const Header = () =>{
               onClick={signUp}
               variant="contained"
               color="primary"
+              className="signup"
             >
               Sign Up
             </Button>
@@ -131,12 +135,14 @@ const Header = () =>{
             </center>
 
             <Input
+              classname="inpt"
               type="email"
               placeholder="email"
               value={email}
               onChange={(e) => setemail(e.target.value)}
             />
             <Input
+              classname="inpt"
               type="password"
               placeholder="password"
               value={password}
@@ -146,7 +152,7 @@ const Header = () =>{
               type="submit"
               onClick={signIn}
               variant="contained"
-              color="primary"
+              
             >
               Sign In
             </Button>

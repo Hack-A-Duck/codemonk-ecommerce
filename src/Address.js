@@ -9,7 +9,7 @@ import { useHistory } from "react-router-dom";
 const Address = () => {
     
     const history= useHistory();
-    const [{},dispatch]=useStateValue();
+    const [state,dispatch]=useStateValue();
 
     const [name,setName]=useState('');
     const [mobile,setMobile]=useState('');
@@ -81,7 +81,7 @@ const Address = () => {
                     <TextField onChange={onCity} value={city} required className="inpt" margin="normal" label="City/ District" variant="outlined" />
                 </div>
                 </form>
-                <Button onClick={click} className="button" variant="contained" color="secondary">
+                <Button disabled={state.user ? false:true } onClick={click} className="button" variant="contained" color="secondary">
                  Continue
                 </Button>
             </div>
