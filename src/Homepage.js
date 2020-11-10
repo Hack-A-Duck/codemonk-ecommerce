@@ -25,8 +25,8 @@ function Homepage() {
    } , [] )
 
     return (
-        <div>
-            <h1>Homepage</h1>
+        <div className="homepg">
+            <h1 className="heading">Homepage</h1>
             
             
             {loading && <ReactBootstrap.Spinner className="loading" animation="border" role="status" />}

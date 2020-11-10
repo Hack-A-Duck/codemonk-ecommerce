@@ -92,7 +92,7 @@ const Header = () =>{
         <div style={modalStyle} className={classes.paper}>
           <form className="app_login">
             <center>
-              <h1>Sign Up</h1>
+              <h1 className="signup">Sign Up</h1>
             </center>
             <Input
               classname="inpt"
@@ -131,7 +131,7 @@ const Header = () =>{
         <div style={modalStyle} className={classes.paper}>
           <form className="app_login">
             <center>
-              <h1>Sign In</h1>
+              <h1 className="signin">Sign In</h1>
             </center>
 
             <Input
@@ -165,7 +165,7 @@ const Header = () =>{
         <h3 >CodeMonk</h3>
         </Link>
         <Link to="/checkout/cart" className="app_cart">
-        <h2>Cart {state.cart?.length}</h2>
+        <h2 className="cart">Cart {state.cart?.length}</h2>
         </Link>
         
         {user ? (
@@ -178,14 +178,14 @@ const Header = () =>{
         ) : (
           <form className="app_loginHome">
             <Button className="signin" onClick={() => setOpenSignIn(true)}>
-              <h4> Sign In</h4>
+              <h4 className="signin"> Sign In</h4>
             </Button>
             <Button
               className="signup"
               onClick={() => setOpen(true)}
               color="primary"
             >
-              <h4> Sign Up</h4>
+              <h4 className="signup"> Sign Up</h4>
             </Button>
           </form>
         )}

@@ -12,9 +12,9 @@ function Cart() {
 
     return (
         <div >
-            <h1>Cart</h1>
+            <h1 className="cartheading">Shopping Cart</h1>
             <div className="cart">
-            <div className="cart_products">
+            <div>
             {
                 state.cart.map(prod =>(
                     <CartProduct 
@@ -26,16 +26,18 @@ function Cart() {
                 ) )
             }
             </div>
-            <div className="car_details">
+            <div className="cart_details">
                 
                 <CurrencyFormat
                     renderText={(value) => (
                     <>
-                       <p>PRICE DETAILS ( {state.cart?.length} items )</p>
-                    <p>Total Price  {value}</p>
-                        <p>Delivery Charges <span>₹ 0</span></p>
+                       <p className="headingcart">PRICE DETAILS <br></br> ( {state.cart?.length} items )</p>
+                       <br></br><br></br>
+                    <p className="pricingdetails">Total Price &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span className="pricingvalue">{value} </span> </p>
+                        <p className="pricingdetails">Delivery Charges &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span className="pricingvalue">₹0</span></p>
+                        <br></br><br></br><br></br><hr className="line"></hr><br></br>
                         
-                        <p>Total Amount  {value}</p>
+                        <p className="pricingdetails1">Total Amount &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  {value} </p><br></br><br></br>
                     </>
                     )}
                     decimalScale={2}
@@ -45,10 +47,11 @@ function Cart() {
                     prefix={"₹"}
                 />
 
-            <Button disabled={state.user ? false:true } onClick={e => history.push('/checkout/address')} variant="contained" color="secondary">
+            <Button classname="placeorder" disabled={state.user ? false:true } onClick={e => history.push('/checkout/address')} variant="contained" color="secondary">
                  PLACE ORDER
             </Button>
-            {!state.user?<p>Please Sign In to continue </p>:<p></p>}
+            <br></br><br></br>
+            {!state.user?<p className="pricingdetails2">Please Sign In to continue </p>:<p></p>}
             </div>
             
             </div>

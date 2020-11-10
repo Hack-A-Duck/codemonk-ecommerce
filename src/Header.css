@@ -53,3 +53,38 @@
 .inpt{
   margin-bottom: 30px;
 }
+.signup{
+  background-color:rgb(233, 8, 94);
+  border:navajowhite;
+  color: white;
+  padding: 15px 22px;
+  margin:0px 5px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 12px;
+}
+.signup:hover{
+  color:black;
+}
+.signin{
+  background-color:rgb(233, 8, 94);
+  border:navajowhite;
+  color: white;
+  margin:0px 5px;
+  padding: 15px 22px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 13px;
+}
+.signin:hover{
+  color:black;
+}
+.cart{
+  margin: 10px;
+  font-size: 30px;
+  font-weight: bold;
+}

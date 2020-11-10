@@ -15,23 +15,26 @@ function CartProduct({id,image,title,price}) {
            })
     }
     return (
-        <div>
+        <div className="product1">
             <div className="cartproduct">
             <img className="cartproduct_image" src={image} />
             <div className="cartproduct_info">
-            <p>{title}</p>
+            <p className="carttext">{title}</p>
             
-            <div>₹ {price}</div>
-            
-               
-            </div>
-            </div>
-            <Button onClick={removeProduct} variant="contained" color="secondary">
+            <div className="price">₹ {price}</div>
+            <br></br><br></br><br></br><br></br>
+            <Button className="remove"  onClick={removeProduct} variant="contained" color="secondary">
                  Remove 
             </Button>
+               
+            </div>
+            
+            </div>
+            
             
 
         </div>
+        
     )
 }
 
