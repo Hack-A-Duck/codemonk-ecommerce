@@ -3,6 +3,7 @@ import Product from './Product'
 import axios from "axios"
 import "./Homepage.css"
 import * as ReactBootstrap from "react-bootstrap"
+import CategoryList from './CategoryList'
 
 function Homepage() {
     const [resi , setResi] =useState([]);

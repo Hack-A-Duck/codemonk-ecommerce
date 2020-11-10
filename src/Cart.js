@@ -10,6 +10,19 @@ function Cart() {
     const history= useHistory();
     const [state,dispatch]=useStateValue();
 
+
+    const handle = ()=>{
+       history.push('/checkout/address');
+       const price = getTotal(state.cart);
+        console.log("heeloleo",price)
+       dispatch({
+            type:'SET_PRICE',
+            price:price
+        })
+
+
+    }
+
     return (
         <div >
             <h1>Cart</h1>
@@ -31,7 +44,7 @@ function Cart() {
                 <CurrencyFormat
                     renderText={(value) => (
                     <>
-                       <p>PRICE DETAILS ( {state.cart?.length} items )</p>
+                       <p className="kk">PRICE DETAILS ( {state.cart?.length} items )</p>
                     <p>Total Price  {value}</p>
                         <p>Delivery Charges <span>₹ 0</span></p>
                         
@@ -45,7 +58,7 @@ function Cart() {
                     prefix={"₹"}
                 />
 
-            <Button disabled={state.user ? false:true } onClick={e => history.push('/checkout/address')} variant="contained" color="secondary">
+            <Button disabled={state.user ? false:true } onClick={handle} variant="contained" color="secondary">
                  PLACE ORDER
             </Button>
             {!state.user?<p>Please Sign In to continue </p>:<p></p>}
