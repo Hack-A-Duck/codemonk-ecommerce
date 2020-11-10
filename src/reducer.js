@@ -8,6 +8,8 @@ export const initialState = {
     town:null,
     city:null,
     price:0,
+    catlist:'',
+    product:[]
 };
 
 
@@ -28,7 +30,25 @@ const reducer = (state , action) => {
                 ...state,
                 user:action.user
             } ;
-        
+        case 'SET_SELLERPRODUCT':
+                return{
+                    ...state,
+                  product:[ ...state.product , action.product ]
+                } ;
+
+        case 'SET_PRICE':
+            return{
+                ...state,
+                price:action.price
+            } ;
+
+        case 'CAT_CHANGE':
+            return{
+                ...state,
+                catlist:action.catlist
+            } ;
+            
+
         case 'SET_ADDRESS':
             return{
                 ...state,

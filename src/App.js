@@ -7,11 +7,12 @@ import Cart from "./Cart";
 import { useStateValue } from "./ContextProvider";
 import Address from "./Address";
 import Payment from "./Payment";
+import Category from "./Category";
+import Seller from "./Seller";
 
 const App = () =>{
-  
 
-  const [{}, dispatch] = useStateValue();
+  const [state, dispatch] = useStateValue();
   
   useEffect(() => {
     const unsubscribe = auth.onAuthStateChanged((authUser) => {
@@ -35,11 +36,19 @@ const App = () =>{
     };
   }, []);
 
-
   return (
     <Router>
     <div className="App">
       <Switch>
+      <Route path={`/category/${state.catlist}` }>
+        {console.log(state.catlist)} 
+          <Header/>
+          <Category categ={state.catlist} />
+        </Route>
+      <Route path="/seller">
+          <Header/>
+          <Seller />
+        </Route>
       <Route path="/checkout/payment">
           <Header/>
           <Payment/>

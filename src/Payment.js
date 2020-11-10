@@ -23,7 +23,7 @@ const __DEV__ = document.domain === 'localhost'
 const Payment = () => {
     const [state,dispatch] = useStateValue();
     
-    const price = getTotal(state.cart)
+    const price = state.price
 
 	async function displayRazorpay() {
 		const res = await loadScript('https://checkout.razorpay.com/v1/checkout.js')
@@ -34,7 +34,7 @@ const Payment = () => {
 		}
 
 		
-		axios.post('http://localhost:1337/dat',{amprice : price})
+		axios.post('http://localhost:1337/dat',{amprice : state.price})
 
 
 		const data = await fetch('http://localhost:1337/razorpay', { method: 'POST' }).then((t) =>
@@ -44,7 +44,7 @@ const Payment = () => {
 		console.log(data)
 
 		const options = {
-			key: __DEV__ ? 'rzp_test_uGoq5ABJztRAhk' : 'PRODUCTION_KEY',
+			key: 'rzp_test_uGoq5ABJztRAhk' ,
 			currency: 'INR',
 			amount: data.amount.toString(),
 			
@@ -71,7 +71,7 @@ const Payment = () => {
         <div>
             <h1>Payment</h1>
             {console.log(state)}
-    <button onClick={displayRazorpay}>Pay ₹{price}</button>
+    <button onClick={displayRazorpay}>Pay ₹{state.price}</button>
         </div>
     )
 }

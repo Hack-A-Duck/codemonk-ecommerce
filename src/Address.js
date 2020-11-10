@@ -70,15 +70,15 @@ const Address = () => {
                 <h4 className="lab1">CONTACT DETAILS</h4>
                 <form method="POST">
                 <div className="contact">
-                    <TextField onChange={onName} value={name} required className="inpt" margin="normal" label="Name" variant="outlined" />
-                    <TextField onChange={onMobile} value={mobile} required className="inpt" margin="normal" label="Mobile Number" variant="outlined" />
+                    <TextField onChange={onName} name="name" value={name} required className="inpt" margin="normal" label="Name" variant="outlined" />
+                    <TextField onChange={onMobile} name="mobile" value={mobile} required className="inpt" margin="normal" label="Mobile Number" variant="outlined" />
                 </div>
                 <h4 className="lab2">ADDRESS</h4>
                 <div className="address">
-                    <TextField onChange={onPin} value={pin} required className="inpt" margin="normal" label="Pincode" variant="outlined" />
-                    <TextField onChange={onAddress} value={adrs} required className="inpt" margin="normal" label="Address(House No, Building, Street, Area)" variant="outlined" />
-                    <TextField onChange={onTown} value={town} required className="inpt" margin="normal" label="Locality/ Town" variant="outlined" />
-                    <TextField onChange={onCity} value={city} required className="inpt" margin="normal" label="City/ District" variant="outlined" />
+                    <TextField onChange={onPin} name="pincode" value={pin} required className="inpt" margin="normal" label="Pincode" variant="outlined" />
+                    <TextField onChange={onAddress} name="address" value={adrs} required className="inpt" margin="normal" label="Address(House No, Building, Street, Area)" variant="outlined" />
+                    <TextField onChange={onTown} name="city" value={town} required className="inpt" margin="normal" label="Locality/ Town" variant="outlined" />
+                    <TextField onChange={onCity} name="district" value={city} required className="inpt" margin="normal" label="City/ District" variant="outlined" />
                 </div>
                 </form>
                 <Button disabled={state.user ? false:true } onClick={click} className="button" variant="contained" color="secondary">

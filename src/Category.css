@@ -1,0 +1,9 @@
+.home {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.loading{
+    margin-left: 50%;
+    margin-top: 200px;
+}

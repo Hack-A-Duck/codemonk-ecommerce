@@ -5,7 +5,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import { auth } from "./firebase";
 import { Button, Modal, Input } from "@material-ui/core";
 import { useStateValue } from "./ContextProvider";
-
+import CategoryList from "./CategoryList";
 
 function getModalStyle() {
   const top = 50;
@@ -164,6 +164,7 @@ const Header = () =>{
           <Link to="/" className="app_logo">
         <h3 >CodeMonk</h3>
         </Link>
+        <CategoryList/>
         <Link to="/checkout/cart" className="app_cart">
         <h2 className="cart">Cart {state.cart?.length}</h2>
         </Link>

@@ -3,16 +3,17 @@ import Product from './Product'
 import axios from "axios"
 import "./Homepage.css"
 import * as ReactBootstrap from "react-bootstrap"
-import CategoryList from './CategoryList'
+import { useStateValue } from './ContextProvider'
 
-function Homepage() {
+function Category({categ}) {
     const [resi , setResi] =useState([]);
     const [loading,setLoading] = useState(false);
+    const [state,dispatch] = useStateValue();
 
     useEffect(() => {
         setLoading(true);
         const getData = async () => {
-        await axios.get('https://fakestoreapi.com/products/')
+        await axios.get(`https://fakestoreapi.com/products/category/${state.catlist}`)
                            .then(resp=> {
                                setResi(resp.data)
                                setLoading(false)
@@ -26,8 +27,8 @@ function Homepage() {
    } , [] )
 
     return (
-        <div className="homepg">
-            <h1 className="heading">Homepage</h1>
+        <div>
+            <h3>Category : {state.catlist} </h3>
             
             
             {loading && <ReactBootstrap.Spinner className="loading" animation="border" role="status" />}
@@ -55,4 +56,4 @@ function Homepage() {
     )
 }
 
-export default Homepage;
+export default Category;
