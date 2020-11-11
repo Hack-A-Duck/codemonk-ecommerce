@@ -1,7 +1,8 @@
 import React,{useState} from 'react'
 import { useStateValue } from './ContextProvider';
-import{getTotal}from "./reducer"
-import axios from 'axios' 
+import axios from 'axios' ;
+import {Button }from "@material-ui/core";
+import "./Payment.css"
 
 function loadScript(src) {
 	return new Promise((resolve) => {
@@ -69,10 +70,32 @@ const Payment = () => {
 
     return (
         <div>
-            <h1>Payment</h1>
-            {console.log(state)}
-    <button onClick={displayRazorpay}>Pay ₹{state.price}</button>
-        </div>
+			{console.log(state)}
+			<div className="pay">
+				<center>
+            	<h2 className="paym">Payment</h2>
+				</center>
+				
+				<div className="marg">
+				<h5 className="det">Details</h5>
+				<p className="name">{state.name}</p>
+				<br></br>
+
+				<p className="addres">{state.address}</p>
+				<p className="addres" >{state.town},{state.city} - {state.pin} </p>
+				
+				<h5 className="det">Products</h5>
+				{state.cart.map(prod=>(<div>
+					<p className="titl"><strong>{prod.title}</strong></p>
+				    <p className="pric">₹ {prod.price}</p>
+					</div>
+				))}
+				</div>
+				<center>
+    			<Button className="buto"  onClick={displayRazorpay} variant="contained" color="secondary">Pay ₹{state.price}</Button>
+				</center>
+	    	</div>
+		</div>
     )
 }
 

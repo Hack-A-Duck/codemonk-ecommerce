@@ -1,0 +1,50 @@
+.pay{
+    display: flex;
+    flex-direction: column;
+    
+    max-width: 30%;
+    border-radius: 12px;
+    margin:0 auto;
+    height: 370px;
+}
+
+.marg{
+    margin-left: 25px;
+}
+
+.paym{
+    margin-top: 29px;
+    padding: 6px;
+
+}
+
+.det{
+   margin-top: 16px;
+    margin-bottom: 0;
+    font-size: 18px;
+}
+
+.name{
+   
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-size: 17px;
+}
+.addres{
+    font-size: 13px;
+    margin-bottom: 0;
+    width: 100%;
+}
+.titl{
+    font-size: 15px;
+    margin-bottom: 0;
+}
+.pric{
+
+    margin-left: 15px;
+    margin-bottom: 25px;
+}
+
+.divi{
+    padding: 50px;
+}
