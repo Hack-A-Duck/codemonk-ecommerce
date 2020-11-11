@@ -1,65 +1,65 @@
 .cart_products{
-        display: flex;
-       flex-direction: column;
-       width: 70%;
+    display: flex;
+   flex-direction: column;
+   width: 70%;
 }
 
 .cart{
-    display: flex;
-  
+display: flex;
+
 }
 
 .cart_details{
-    float: right;
-    margin-right: 10px;
-    padding: 10px;
+float: right;
+margin-right: 10px;
+padding: 10px;
 
-    background-color: rgb(243, 239, 239);
-  width: 380px;
-  border: 2px solid rgb(233, 8, 94);
-  border-radius: 15px;
-  padding: 50px;
-  margin: 20px;
-  font-family: inherit;
-  max-height: 500px;
+background-color: rgb(243, 239, 239);
+width: 380px;
+border: 2px solid rgb(233, 8, 94);
+border-radius: 15px;
+padding: 50px;
+margin: 20px;
+font-family: inherit;
+max-height: 500px;
 }
 .headingcart{
-  font-size: 30px;
-  color: rgb(26, 25, 25);
-  font-weight: bold;
-  
+font-size: 30px;
+color: rgb(26, 25, 25);
+font-weight: bold;
+
 }
 .pricingdetails{
-  font-size: 20px;
+font-size: 20px;
 }
 .pricingvalue{
-  font-size: 20px;
- 
-  color:rgb(233, 8, 94) ;
+font-size: 20px;
+
+color:rgb(233, 8, 94) ;
 
 }
 .pricingdetails1{
-  font-size: 20px;
-  font-weight: bolder;
- 
-  color:rgb(27, 27, 27) ;
+font-size: 20px;
+font-weight: bolder;
+
+color:rgb(27, 27, 27) ;
 
 }
 .pricingdetails2{
-  font-size: 15px;
-  
- 
-  color:rgb(27, 27, 27) ;
+font-size: 15px;
+
+
+color:rgb(27, 27, 27) ;
 
 }
 
 .placeorder:hover{
-  color:black;
+color:black;
 }
 .cartheading{
-  color:rgb(233, 8, 94);
-  font-size: 35px;
-  font-weight: bold;
-  text-align: center;
+color:rgb(233, 8, 94);
+font-size: 35px;
+font-weight: bold;
+text-align: center;
 }
 

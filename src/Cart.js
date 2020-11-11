@@ -10,6 +10,19 @@ function Cart() {
     const history= useHistory();
     const [state,dispatch]=useStateValue();
 
+
+    const handle = ()=>{
+       history.push('/checkout/address');
+       const price = getTotal(state.cart);
+        console.log("heeloleo",price)
+       dispatch({
+            type:'SET_PRICE',
+            price:price
+        })
+
+
+    }
+
     return (
         <div >
             <h1 className="cartheading">Shopping Cart</h1>
@@ -47,7 +60,7 @@ function Cart() {
                     prefix={"₹"}
                 />
 
-            <Button classname="placeorder" disabled={state.user ? false:true } onClick={e => history.push('/checkout/address')} variant="contained" color="secondary">
+            <Button classname="placeorder" disabled={state.user ? false:true } onClick={handle} variant="contained" color="secondary">
                  PLACE ORDER
             </Button>
             <br></br><br></br>
