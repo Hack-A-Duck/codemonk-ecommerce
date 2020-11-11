@@ -9,7 +9,8 @@ export const initialState = {
     city:null,
     price:0,
     catlist:'',
-    product:[]
+    product:[],
+    quantity:0
 };
 
 
@@ -64,7 +65,8 @@ const reducer = (state , action) => {
         case 'ADD_PRODUCT':
             return{
                 ...state,
-                cart:[ ...state.cart , action.product ]
+                cart:[ ...state.cart , action.product ],
+                quantity:action.quant
             }
 
         case 'REMOVE_PRODUCT':
