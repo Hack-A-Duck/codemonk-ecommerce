@@ -41,7 +41,8 @@ const Product = ({id,title,des,price,image}) => {
                 image:image,
                 price:price,
                 quant:num
-            }
+            },
+            quant:num
         })
         setDis(true);
         console.log(state.cart)
